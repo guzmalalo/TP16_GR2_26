@@ -36,6 +36,9 @@ void afficher(Coord* tab[6], int tLog) {
 int main() {
     // variables
     Coord* tab[6] ={0};
+
+    //a faire
+    //Coord * *tab = malloc(6*sizeof(Coord*));
     int nbCoordMax  = 6;
     int nbCoord =0;
     int x, y;
@@ -63,7 +66,10 @@ int main() {
 
 
     // Liberation
-
+    for (int i = 0; i < nbCoord; ++i) {
+        free(tab[i]);
+        tab[i] = NULL;
+    }
 
     return 0;
 }
